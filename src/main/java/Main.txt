@@ -1,0 +1,41 @@
+JSON : javascript object notation.
+
+### datatypes in a js object:
+- primitive  types : string,number,boolean, null
+    - null : simply meaning that the key is undefined . note: it is upto parsers to define whether they will be
+             considering key defined as null and key not present as both null or different
+    - string   : plain old stirngs. end delimeters and special characters are utf encoded. can be millions of gb in size
+    - booleans : plain old true and false . supported by all languages
+    - numbers  :
+        - consists of  real numbers(25/4 or 6.25) ,irrational numbers(pi aka 3.1427... or e) and integers(-3,-2,0,1,2,..)
+        - java number classes are : byte(for value -127 to 127), int (for value ~ +-200crore) ,
+          long (for value +-2*10^18), float(for values +- 1.0 * 10^34 but with lesser precision during BODMAS),
+          double(for values +- 1.0* 10^308)kotlin  also support some weird numbers produced during calculations
+          via float/double : '-0' , 'Infinity' , 'nan'
+        - it may seem that double is the way to go with json as js can generate any number, but long or int should also
+          be considered if they can be modified via a math operation. size of long = 10^18 ~ 2^53 = 9 petabytes = total
+          millis in 0.95 light years . so its long enough for a lot of data
+
+
+- collection types : array, object:
+    - array : can consist of other primitive types, object , be null or be  empty
+    - object:
+        - json object is  a unordered collection of key value pairs . the keys are always string and expected to be
+          unique . if keys are repeated, the value might get overridden or parsed as range, depending upon the parser
+        - common java classes that can be used to map it: hashtable, hashmap. as these maps use hashing algos for
+          creating object, hash-dos attack is an important concern
+
+misc:
+    - passing dates: RFC 3339 (timestamp format) is usually used to transmit dates
+    - binary data : data like images/videos/pdfs/etc can be converted to binary and attached as a string. or
+      urls can also be send
+
+
+### parsing
+- json is received as a streamable format , i,e open stream of bits.
+- parsers are supposed to convert those streams to java/kt class instances as soon as it is available.
+- various parsers use different mechanisms to do this: moshi, for eg, creates a trie of all the public class variables
+  and while reading each byte,if it encounters a key which matches any of class variable, it sets the value of that variable
+  else skips them
+
+- it is advisable to keep the variables as public and nullable/with defaults that needs to be parsed

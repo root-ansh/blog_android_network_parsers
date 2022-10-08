@@ -1,8 +1,10 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
+    id("java")
     kotlin("jvm") version "1.6.21"
     application
+    id("com.google.devtools.ksp") version "1.7.10-1.0.6"
 }
 
 group = "org.example"
@@ -14,6 +16,10 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    implementation("com.google.devtools.ksp:symbol-processing-api:1.7.10-1.0.6")
+    implementation("com.squareup.moshi:moshi:1.14.0")
+    ksp("com.squareup.moshi:moshi-kotlin-codegen:1.14.0")
+
 }
 
 tasks.test {
