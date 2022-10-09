@@ -17,8 +17,12 @@ repositories {
 dependencies {
     testImplementation(kotlin("test"))
     implementation("com.google.devtools.ksp:symbol-processing-api:1.7.10-1.0.6")
+
     implementation("com.squareup.moshi:moshi:1.14.0")
     ksp("com.squareup.moshi:moshi-kotlin-codegen:1.14.0")
+
+    implementation( "com.google.code.gson:gson:2.9.1")
+
 
 }
 

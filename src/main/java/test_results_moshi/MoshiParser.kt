@@ -83,12 +83,12 @@ object MoshiParser {
     fun getMoshi(): Moshi {
         return Moshi.Builder().add(UseDefaultIfNullFactory()).add(DateAdapter).build()
     }
-    fun  getInstanceNulls(str:String): ApiDataNullable?{
+    fun  getInstanceNullified(str:String): ApiDataNullable?{
         val moshi = getMoshi()
         val adapter : JsonAdapter<ApiDataNullable> = moshi.adapter(ApiDataNullable::class.java)
         return adapter.fromJson(str)
     }
-    fun  getInstanceDefaults(str:String): ApiDataFilled?{
+    fun  getInstanceFilled(str:String): ApiDataFilled?{
         val moshi = getMoshi()
 
         return moshi.adapter(ApiDataFilled::class.java).fromJson(str)

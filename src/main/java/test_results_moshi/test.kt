@@ -20,11 +20,6 @@ import input_data.MyInputs
  *
  */
 
-/* JAVA RESULTS
- * 1. scenario 1-5 , for java
- * result : PASS, 1,2,4,5 worked for java .  generic parser function not accessible via java
- *
- */
 
 
 fun main(args: Array<String>) {

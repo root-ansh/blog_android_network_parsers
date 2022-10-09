@@ -8,7 +8,7 @@ object MyInputs {
          "planets": [
            {
              "name": "venus",
-             "found_by": "jagga singh",
+             "found_by": "jagga & singh",
              "population": null,
              "moons": []
            },

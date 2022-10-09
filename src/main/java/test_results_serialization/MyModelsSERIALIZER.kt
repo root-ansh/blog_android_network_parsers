@@ -1,4 +1,4 @@
-package input_data
+package test_results_serialization
 
 import java.util.Date
 

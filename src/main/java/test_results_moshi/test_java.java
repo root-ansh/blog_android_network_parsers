@@ -3,16 +3,21 @@ package test_results_moshi;
 import input_data.MyInputs;
 
 
+
+/* JAVA RESULTS
+ * 1. scenario 1-5 , for java
+ * result : PASS, 1,2,4,5 worked for java .  generic parser function not accessible via java
+ */
 public class test_java {
 
 
     public static void main(String[] args) {
         String jsonStr = MyInputs.INSTANCE.getI1();
 
-        ApiDataNullable apiData = MoshiParser.INSTANCE.getInstanceNulls(jsonStr);
+        ApiDataNullable apiData = MoshiParser.INSTANCE.getInstanceNullified(jsonStr);
         MyModelsMOSHI.INSTANCE.printNullable(apiData);
 
-        ApiDataFilled apiData2 = MoshiParser.INSTANCE.getInstanceDefaults(jsonStr);
+        ApiDataFilled apiData2 = MoshiParser.INSTANCE.getInstanceFilled(jsonStr);
         MyModelsMOSHI.INSTANCE.printDefault(apiData2);
 
 
