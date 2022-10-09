@@ -3,11 +3,12 @@ import input_data.MyInputs
 
 
 /* KOTLIN RESULTS
+
  * case 1 : whether parser is able to set null when a model has no defaults for (a)missing , (b) null keys
  * result : (a)PASS (b)PASS
  *
  * 2. whether parser is able to set default value when a model has  defaults set for (a) missing , (b) null keys
- * result : (a)PASS (b)PASS , using null nulladapter and null handler annotation
+ * result : (a)PARTIAL_PASS* (b)PARTIAL_PASS , via null default-null-custom-adapter(REFLECTION!!) and custom annotation
  *
  * 3. whether we are able to create a generic parser function that only takes model type, string as input
  * result : PASS
