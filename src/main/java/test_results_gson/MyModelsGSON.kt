@@ -44,7 +44,7 @@ data class MoonFilled(
 //----------------------------------------------------------------
 
 object MyModelsGSON{
-    fun printNullable(apiData: ApiDataNullable?) {
+    fun printObj(apiData: ApiDataNullable?) {
         apiData.let { data ->
 
             val builder = java.lang.StringBuilder()
@@ -72,7 +72,7 @@ object MyModelsGSON{
             println(builder.toString())
         }
     }
-    fun printDefault(apiData: ApiDataFilled?){
+    fun printObj(apiData: ApiDataFilled?){
         apiData.let { data ->
             val builder = java.lang.StringBuilder()
             builder
