@@ -10,7 +10,6 @@ object MyInputs {
              "name": "venus",
              "found_by": "jagga singh",
              "population": null,
-             "distnace_from_sun": 111222333444555666777888999.32,
              "moons": []
            },
            {
