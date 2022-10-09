@@ -79,7 +79,7 @@ object DateAdapter {
 
 
 
-object MoshiParser {
+object MyMoshiParser {
     fun getMoshi(): Moshi {
         return Moshi.Builder().add(UseDefaultIfNullFactory()).add(DateAdapter).build()
     }

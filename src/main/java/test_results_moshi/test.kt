@@ -26,15 +26,15 @@ import input_data.MyInputs
 fun main(args: Array<String>) {
    val inputs = MyInputs.i1
 
-   val apiData = MoshiParser.getInstanceGeneric<ApiDataNullable>(inputs)
+   val apiData = MyMoshiParser.getInstanceGeneric<ApiDataNullable>(inputs)
    MyModelsMOSHI.printNullable(apiData)
 
-   val apiDataDefaults = MoshiParser.getInstanceGeneric<ApiDataFilled>(inputs)
+   val apiDataDefaults = MyMoshiParser.getInstanceGeneric<ApiDataFilled>(inputs)
    MyModelsMOSHI.printDefault(apiDataDefaults)
 
 
-   println("WITH NULLS >> reverse string = "+ MoshiParser.instanceToJsonNulls(apiData!!))
-   println("WITH DEFAULTS >> reverse string = "+ MoshiParser.instanceToJsonDefs(apiDataDefaults!!))
+   println("WITH NULLS >> reverse string = "+ MyMoshiParser.instanceToJsonNulls(apiData!!))
+   println("WITH DEFAULTS >> reverse string = "+ MyMoshiParser.instanceToJsonDefs(apiDataDefaults!!))
 
 
 }

@@ -14,16 +14,16 @@ public class test_java {
     public static void main(String[] args) {
         String jsonStr = MyInputs.INSTANCE.getI1();
 
-        ApiDataNullable apiData = MoshiParser.INSTANCE.getInstanceNullified(jsonStr);
+        ApiDataNullable apiData = MyMoshiParser.INSTANCE.getInstanceNullified(jsonStr);
         MyModelsMOSHI.INSTANCE.printNullable(apiData);
 
-        ApiDataFilled apiData2 = MoshiParser.INSTANCE.getInstanceFilled(jsonStr);
+        ApiDataFilled apiData2 = MyMoshiParser.INSTANCE.getInstanceFilled(jsonStr);
         MyModelsMOSHI.INSTANCE.printDefault(apiData2);
 
 
 
-        System.out.println("WITH NULLS >> reverse string = "+MoshiParser.INSTANCE.instanceToJsonNulls(apiData));
-        System.out.println("WITH DEFAULSTS >> reverse string = "+MoshiParser.INSTANCE.instanceToJsonDefs(apiData2));
+        System.out.println("WITH NULLS >> reverse string = "+ MyMoshiParser.INSTANCE.instanceToJsonNulls(apiData));
+        System.out.println("WITH DEFAULSTS >> reverse string = "+ MyMoshiParser.INSTANCE.instanceToJsonDefs(apiData2));
 
     }
 }
