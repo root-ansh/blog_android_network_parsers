@@ -7,7 +7,7 @@ import input_data.MyInputs
  * result : (a)PASS (b)PASS
  *
  * 2. whether parser is able to set default value when a model has  defaults set for (a) missing , (b) null keys
- * result : (a)PASS (b)PASS , using null nulladapter and null handler annotation
+ * result : (a)PASS (b)PASS , when all defaults are provided for gson
  *
  * 3. whether we are able to create a generic parser function that only takes model type, string as input
  * result : PASS
@@ -16,7 +16,7 @@ import input_data.MyInputs
  * result : PARTIAL_PASS* : max length for long = 999_999_999_999_999_999 ~ 900K trillion
  *
  * 5. whether dates can be parsed,
- * result : PASS, using custom parser
+ * result : PASS, using custom adapter
  *
  */
 
@@ -32,11 +32,10 @@ fun main(args: Array<String>) {
    MyModelsGSON.printObj(pojoFilled)
 
 
-//   println("WITH NULLS >> reverse string = "+ MyGsonParser.toJsonString(pojoNullified))
-   println("WITH NULLS ENHANCED >> reverse string = "+ MyGsonParser.toJsonStringSpecific<ApiDataNullable>(pojoNullified))
-
-//   println("WITH FILLED >> reverse string = "+ MyGsonParser.toJsonString(pojoFilled))
-   println("WITH FILLED ENHANCED >> reverse string = "+ MyGsonParser.toJsonStringSpecific<ApiDataFilled>(pojoFilled))
+   println("WITH NULLS >> reverse string            ="+ MyGsonParser.toJsonString(pojoNullified))
+   println("WITH NULLS ENHANCED >> reverse string   ="+ MyGsonParser.toJsonStringSpecific<ApiDataNullable>(pojoNullified))
+   println("WITH FILLED >> reverse string           ="+ MyGsonParser.toJsonString(pojoFilled))
+   println("WITH FILLED ENHANCED >> reverse string  ="+ MyGsonParser.toJsonStringSpecific<ApiDataFilled>(pojoFilled))
 
 
 
