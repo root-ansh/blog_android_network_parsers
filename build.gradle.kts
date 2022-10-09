@@ -5,6 +5,8 @@ plugins {
     kotlin("jvm") version "1.6.21"
     application
     id("com.google.devtools.ksp") version "1.7.10-1.0.6"
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.6.21"
+
 }
 
 group = "org.example"
@@ -22,6 +24,8 @@ dependencies {
     ksp("com.squareup.moshi:moshi-kotlin-codegen:1.14.0")
 
     implementation( "com.google.code.gson:gson:2.9.1")
+
+    implementation( "org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0")
 
 
 }
