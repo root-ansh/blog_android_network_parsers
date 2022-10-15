@@ -152,6 +152,14 @@ We will be creating instances of parsers and validating these cases for  all of 
 - test cases and results : [kotlin](https://github.com/root-ansh/testing_parsers/blob/main/src/main/java/test_results_serialization/test.kt)  and [java](https://github.com/root-ansh/testing_parsers/blob/main/src/main/java/test_results_serialization/test_java.java) 
 
 
+<details>
+<summary><h3>Resources</h3></summary>
+
+- heavily inspired by this awesome talk by @jessiwilson  and its notes : https://speakerdeck.com/swankjesse/json-explained-chicago-roboto-2019
+- good for understanding moshi custom adapters : https://bladecoder.medium.com/advanced-json-parsing-techniques-using-moshi-and-kotlin-daf56a7b963d
+- good for understanding moshi codegen : https://www.zacsweers.dev/exploring-moshis-kotlin-code-gen/
+</details>
+
 
 
 
