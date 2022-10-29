@@ -1,4 +1,6 @@
-# About
+# Parsers in Android
+
+## About
 
 This is a small repo/blog about  how 3 parsers : `Gson`, `Moshi` and `kotlinx-serializer` can be used  convert a JSON string to object and vice versa, based on specific conditions/tests
 
