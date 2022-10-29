@@ -8,7 +8,7 @@ This is a small repo/blog about  how 3 parsers : `Gson`, `Moshi` and `kotlinx-se
 
 ### About Parsers
 
-<details>
+<details open>
 <summary>Back Story</summary>
 
 - We know that JSON is one of the most common ways of communicating among clients and server on the internet. JSON is basically just a blob of human readable data that gets converted to 1s and 0s and transmitted across the various network components as a streamable format , i,e open stream of bits.
@@ -21,7 +21,7 @@ This is a small repo/blog about  how 3 parsers : `Gson`, `Moshi` and `kotlinx-se
 
 *Thus, **Parsers** in Android are basically the softwares/libraries/pieces of code that will read the blobs of data received via the interned, and **convert it into instances of java/kotlin classes(data models) AND Vice Versa***
 
-<details>
+<details open>
 <summary>More Info</summary>
 
 There are various properties associated with a parser:
@@ -33,7 +33,7 @@ There are various properties associated with a parser:
 </details>
 
 
-<details>
+<details open>
 <summary> <h3> About JSON </h3> </summary>
 
 The various types of data that a json can consist are : 
@@ -74,7 +74,7 @@ The various types of data that a json can consist are :
 
 So this repo is created to test some common scenarios that may exist with a json data and how parsers are supposed to deal with them. We imagine the data to be one of the samples from NASA data, which tells about some planets and their moons in a solar system
  
-<details>
+<details open>
   <summary><h3>Input Data</h3></summary>
   
   ```json
@@ -156,7 +156,7 @@ We will be creating instances of parsers and validating these cases for  all of 
 - test cases and results : [kotlin](https://github.com/root-ansh/testing_parsers/blob/main/src/main/java/test_results_serialization/test.kt)  and [java](https://github.com/root-ansh/testing_parsers/blob/main/src/main/java/test_results_serialization/test_java.java) 
 
 
-<details>
+<details open>
 <summary><h3>Resources</h3></summary>
 
 - heavily inspired by this awesome talk by @jessiwilson  and its notes : https://speakerdeck.com/swankjesse/json-explained-chicago-roboto-2019
